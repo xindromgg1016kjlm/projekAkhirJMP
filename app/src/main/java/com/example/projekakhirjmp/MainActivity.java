@@ -1,14 +1,23 @@
 package com.example.projekakhirjmp;
 
+import android.content.Intent;
 import android.os.Bundle;
-
+import android.widget.Button;
+import android.widget.ListView;
+import android.view.View;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
+
+
 public class MainActivity extends AppCompatActivity {
+    Button btnList, btnInput, btnInfo, btnKeluar;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +29,42 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        btnList = findViewById(R.id.buttonList);
+        btnInput = findViewById(R.id.buttonInput);
+        btnInfo = findViewById(R.id.buttonInformasi);
+        btnKeluar = findViewById(R.id.buttonKeluar);
+
+        btnList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,ListData.class);
+                startActivity(intent);
+
+            }
+
+
+        });
+        btnInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,InputData.class);
+                startActivity(intent);
+
+            }
+
+
+        });
+
+        btnKeluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Login.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
 }

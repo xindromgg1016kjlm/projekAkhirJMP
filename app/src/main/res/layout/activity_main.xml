@@ -7,13 +7,61 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <!-- ImageView untuk logo atau gambar -->
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/baseline_app_registration_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="150dp"
+        android:contentDescription="Logo" />
 
+    <Button
+        android:id="@+id/buttonList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Lihat Data"
+        app:layout_constraintTop_toBottomOf="@id/imageViewLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/buttonInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Input Data"
+        app:layout_constraintTop_toBottomOf="@id/buttonList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/buttonInformasi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Informasi Aplikasi"
+        app:layout_constraintTop_toBottomOf="@id/buttonInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/buttonKeluar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Keluar"
+        app:layout_constraintTop_toBottomOf="@id/buttonInformasi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="24dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
